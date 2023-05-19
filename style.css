@@ -1,0 +1,41 @@
+.cabecalho {
+    background: #ec8632;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.titulo {
+    padding: 0 50px 0 50px;
+}
+
+.titulo__avatar {
+    height: 100px;
+    weight: 100px;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    align-items: last baseline;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contato {
+    padding: 0 50px 0 50px;
+}
+
+.contato-item, .menu-item {
+    text-decoration: none;
+}
+
+.missao__empresa {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.logo__whatsapp {
+    width: 15px;
+    font-weight: 15px;
+}
