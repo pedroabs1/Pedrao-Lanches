@@ -1,32 +1,52 @@
 .cabecalho {
     background: #ec8632;
-    display: flex;
-    justify-content: space-between;    
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    /* justify-content: space-between;    */
+    width: 100vw;
+    margin: 0;
+    flex-wrap: wrap; 
 }
 
 .titulo {
-    padding: 0 50px 0 50px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding: 10px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .titulo__avatar {
     height: 100px;
-    weight: 100px;
+    width: 100px;
 }
 
 .menu {
+    grid-row: 2/3;
+    grid-column: 1/span 3;
     display: flex;
-    gap: 1rem;
-    align-items: last baseline;
-    font-size: 20px;
+    gap: .5rem;
+    align-items: center;
+    font-size: 16px;
     font-weight: bold;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .contato {
-    padding: 0 50px 0 50px;
+    display: none;
+    list-style-type: none;
 }
 
 .contato-item, .menu-item {
     text-decoration: none;
+}
+
+.imagem__principal {
+    width: 100%;
 }
 
 .missao__empresa {
@@ -39,3 +59,117 @@
     width: 15px;
     font-weight: 15px;
 }
+
+.cardapio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: .1rem; */
+}
+
+
+.descricao--lanche {
+    list-style-type: none;
+    padding: 3px 0;
+}
+
+.imagem--lanche {
+    width: 120px;
+    height: 120px;
+}
+
+.container__comprar {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.comprar--lanche {
+    height: 80px;
+}
+
+.cartao__lanche {
+    padding: 5px
+}
+
+@media screen and (min-width: 720px){    
+    .titulo__avatar {
+        height: 150px;
+        width: 150px;
+    }
+
+    .titulo {
+        align-self: center;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    .menu {
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .contato {
+        display: block;
+        padding: 0 10px 0 10px;
+        align-self: center;
+    }
+
+    .contato-item, .menu-item {
+        font-size: 18px;
+    }
+
+    .cardapio {
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .imagem--lanche {
+        width: 240px;
+        height: 240px;
+    }    
+}
+
+@media screen and (min-width: 1440px){
+    
+    .titulo {
+        font-size: 36px;
+    }
+    
+    .cardapio {
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .imagem--lanche {
+        width: 340px;
+        height: 340px;
+    }
+
+    .contato-item, .menu-item {
+        font-size: 26px;
+    }
+
+    .contato {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        gap: 1.5rem;
+        font-size: 40px;
+    }
+    
+}
+
