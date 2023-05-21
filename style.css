@@ -173,3 +173,72 @@
     
 }
 
+/* popup */
+/* .popup__container {
+    display: none;
+} */
+
+.popup__container {
+    z-index: -1;
+    opacity: 0;
+    display: none;
+    }
+    
+.popup__container.opened {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #222;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 999;
+    opacity: 1;
+    display: flex;
+}   
+
+.botao {
+    font-size: 16px;
+}
+
+.popup__texto {
+    font-size: 24px;
+}
+
+.popup__horario {
+    z-index: -1;
+    opacity: 0;
+    transform: scale(.4);
+}
+
+.popup__horario.opened {
+    position: absolute;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    width: 90vw;
+    box-sizing: border-box;
+    z-index: 999;
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}
+
+@media screen and (min-width: 720px){
+    .popup__horario.opened {
+        width: 600px;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .popup__horario.opened {
+        width: 800px;
+        align-items: center;
+    }
+}
