@@ -1,3 +1,13 @@
+/*
+██   ██ ███████  █████  ██████  ███████ ██████
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██
+███████ █████   ███████ ██   ██ █████   ██████
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██
+██   ██ ███████ ██   ██ ██████  ███████ ██   ██
+
+
+*/
+
 .cabecalho {
     background: #ec8632;
     display: grid;
@@ -18,6 +28,15 @@
     justify-content: center;
     
 }
+ /*
+ ████████ ██ ████████ ██    ██ ██       ██████
+    ██    ██    ██    ██    ██ ██      ██    ██
+    ██    ██    ██    ██    ██ ██      ██    ██
+    ██    ██    ██    ██    ██ ██      ██    ██
+    ██    ██    ██     ██████  ███████  ██████
+
+
+ */
 
 .titulo__avatar {
     height: 100px;
@@ -38,7 +57,7 @@
 }
 
 .imagem__principal {
-    height: 400px;
+    height: 200px;
     width: 100%;
 }
 
@@ -46,11 +65,6 @@
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
-}
-
-.logo__whatsapp {
-    width: 15px;
-    font-weight: 15px;
 }
 
 /*
@@ -71,6 +85,12 @@
     text-decoration: none;
 }
 
+.logo__whatsapp {
+    width: 15px;
+    font-weight: 15px;
+    padding: 0 5px 0 5px;
+}
+
 /*
  ██████  █████  ██████  ██████   █████  ██████  ██  ██████
 ██      ██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██ ██    ██
@@ -88,15 +108,23 @@
     /* gap: .1rem; */
 }
 
-
-.descricao--lanche {
-    list-style-type: none;
-    padding: 3px 0;
+.cartao__lanche {
+    padding: 5px;
+    background: #7a7a7a32;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .imagem--lanche {
     width: 120px;
     height: 120px;
+}
+
+.descricao--lanche, .titulo--lanche {
+    list-style-type: none;
+    padding: 10px;
 }
 
 .container__comprar {
@@ -106,11 +134,7 @@
 }
 
 .comprar--lanche {
-    height: 80px;
-}
-
-.cartao__lanche {
-    padding: 5px
+    height: 30px;
 }
 
 /*
@@ -122,25 +146,42 @@
     ▀▀
 
 */
+.container__container--qr {
+    display: flex;
+    flex-direction: column;
+}
 
 .container__qr {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    background-color: #afafaf;
+    border-radius: 10px;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .qr__acesse--site, .qr__cardapio {
-    width: 50px;
-    height: 50px;
-    margin: 20px 0;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0 0 0;
 }
 
 .acesse--site, .acesse--cardapio {
     margin: 5px 0;
 }
 .since, .autor {
-    text-align: center;
+    text-align: left;
+}
+.since {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.autor {
+    margin-top: 10px;
 }
 /*
 ██████   ██████  ██████  ██    ██ ██████
@@ -322,6 +363,11 @@ td{
         font-size: 18px;
     }
 
+    .imagem__principal {
+        height: 300px;
+        width: 100%;
+    }
+
     .cardapio {
         /* display: flex; */
         display: grid;
@@ -333,6 +379,7 @@ td{
     .imagem--lanche {
         width: 240px;
         height: 240px;
+        margin: auto;
     } 
     
     .formulario-contato {
@@ -347,6 +394,10 @@ td{
 
     .enviar {
         width: 200px;
+    }
+
+    .container__container--qr {
+        flex-direction: row;
     }
 }
 /*
@@ -368,7 +419,11 @@ td{
         height: 200px;
         width: 200px;
     }
-    
+
+    .imagem__principal {
+        height: 400px;
+        width: 100%;
+    }
     .cardapio {
         /* display: flex; */
         display: grid;
@@ -406,7 +461,11 @@ td{
         width: 800px;
         align-items: center;
     }
-    
+
+    .container__container--qr {
+        flex-direction: row;
+    }
+
     .qr__acesse--site, .qr__cardapio {
         width: 150px;
         height: 150px;
