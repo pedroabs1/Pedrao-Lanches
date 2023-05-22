@@ -22,6 +22,7 @@
 .titulo__avatar {
     height: 100px;
     width: 100px;
+    text-align: center;
 }
 
 .menu {
@@ -36,16 +37,8 @@
     margin: auto;
 }
 
-.contato {
-    display: none;
-    list-style-type: none;
-}
-
-.contato-item, .menu-item {
-    text-decoration: none;
-}
-
 .imagem__principal {
+    height: 400px;
     width: 100%;
 }
 
@@ -60,6 +53,33 @@
     font-weight: 15px;
 }
 
+/*
+ ██████  ██████  ███    ██ ████████  █████  ████████  ██████
+██      ██    ██ ████   ██    ██    ██   ██    ██    ██    ██
+██      ██    ██ ██ ██  ██    ██    ███████    ██    ██    ██
+██      ██    ██ ██  ██ ██    ██    ██   ██    ██    ██    ██
+ ██████  ██████  ██   ████    ██    ██   ██    ██     ██████
+
+
+*/
+.contato {
+    display: none;
+    list-style-type: none;
+}
+
+.contato-item, .menu-item {
+    text-decoration: none;
+}
+
+/*
+ ██████  █████  ██████  ██████   █████  ██████  ██  ██████
+██      ██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██ ██    ██
+██      ███████ ██████  ██   ██ ███████ ██████  ██ ██    ██
+██      ██   ██ ██   ██ ██   ██ ██   ██ ██      ██ ██    ██
+ ██████ ██   ██ ██   ██ ██████  ██   ██ ██      ██  ██████
+
+
+*/
 .cardapio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -93,90 +113,44 @@
     padding: 5px
 }
 
-@media screen and (min-width: 720px){    
-    .titulo__avatar {
-        height: 150px;
-        width: 150px;
-    }
+/*
+ ██████  ██████       ██████  ██████  ██████  ███████
+██    ██ ██   ██     ██      ██    ██ ██   ██ ██
+██    ██ ██████      ██      ██    ██ ██   ██ █████
+██ ▄▄ ██ ██   ██     ██      ██    ██ ██   ██ ██
+ ██████  ██   ██      ██████  ██████  ██████  ███████
+    ▀▀
 
-    .titulo {
-        align-self: center;
-        justify-content: center;
-        margin: 0;
+*/
 
-    }
-
-    .menu {
-        display: flex;
-        font-size: 16px;
-        font-weight: bold;
-        justify-content: space-evenly;
-        margin: 0;
-    }
-
-    .contato {
-        display: block;
-        padding: 0 10px 0 10px;
-        align-self: center;
-    }
-
-    .contato-item, .menu-item {
-        font-size: 18px;
-    }
-
-    .cardapio {
-        /* display: flex; */
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .imagem--lanche {
-        width: 240px;
-        height: 240px;
-    }    
+.container__qr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
 
-@media screen and (min-width: 1440px){
-    
-    .titulo {
-        font-size: 36px;
-    }
-    
-    .cardapio {
-        /* display: flex; */
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .imagem--lanche {
-        width: 340px;
-        height: 340px;
-    }
-
-    .contato-item, .menu-item {
-        font-size: 26px;
-    }
-
-    .contato {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .menu {
-        gap: 1.5rem;
-        font-size: 40px;
-    }
-    
+.qr__acesse--site, .qr__cardapio {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
 }
 
-/* popup */
-/* .popup__container {
-    display: none;
-} */
+.acesse--site, .acesse--cardapio {
+    margin: 5px 0;
+}
+.since, .autor {
+    text-align: center;
+}
+/*
+██████   ██████  ██████  ██    ██ ██████
+██   ██ ██    ██ ██   ██ ██    ██ ██   ██
+██████  ██    ██ ██████  ██    ██ ██████
+██      ██    ██ ██      ██    ██ ██
+██       ██████  ██       ██████  ██
+
+
+*/
 
 .popup__container {
     z-index: -1;
@@ -228,17 +202,214 @@
     transform: scale(1);
     display: block;
 }
+/*
+███████  ██████  ██████  ███    ███ ██    ██ ██       █████  ██████  ██  ██████
+██      ██    ██ ██   ██ ████  ████ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██
+█████   ██    ██ ██████  ██ ████ ██ ██    ██ ██      ███████ ██████  ██ ██    ██
+██      ██    ██ ██   ██ ██  ██  ██ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██
+██       ██████  ██   ██ ██      ██  ██████  ███████ ██   ██ ██   ██ ██  ██████
 
-@media screen and (min-width: 720px){
+
+*/
+.formulario-contato {
+    width: 240px;
+    margin: 0 auto;
+}
+
+form, table {
+    margin: 50px 30px;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao{
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 25px;
+    width: 90%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 100%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s background;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*rotate(70deg); */
+    transform: matrix3d(1,2);
+}
+
+th{
+    background-color: #6d6b6b;
+    border: solid 1px;
+    padding: 8px 15px;
+}
+
+td{
+    border: solid 1px;
+    /* background-color: #d6d4d4; */
+    padding: 8px 15px;
+}
+
+/*
+                              █████  ███
+                             ░░███  ░░░
+ █████████████    ██████   ███████  ████   ██████       ████████ █████ ████  ██████  ████████  █████ ████
+░░███░░███░░███  ███░░███ ███░░███ ░░███  ░░░░░███     ███░░███ ░░███ ░███  ███░░███░░███░░███░░███ ░███
+ ░███ ░███ ░███ ░███████ ░███ ░███  ░███   ███████    ░███ ░███  ░███ ░███ ░███████  ░███ ░░░  ░███ ░███
+ ░███ ░███ ░███ ░███░░░  ░███ ░███  ░███  ███░░███    ░███ ░███  ░███ ░███ ░███░░░   ░███      ░███ ░███
+ █████░███ █████░░██████ ░░████████ █████░░████████   ░░███████  ░░████████░░██████  █████     ░░███████
+░░░░░ ░░░ ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░  ░░░░░░░░     ░░░░░███   ░░░░░░░░  ░░░░░░  ░░░░░       ░░░░░███
+                                                           ░███                                 ███ ░███
+                                                           █████                               ░░██████
+                                                          ░░░░░                                 ░░░░░░
+*/
+/*
+███████ ██████   ██████  ██████  ██   ██
+     ██      ██ ██  ████ ██   ██  ██ ██
+    ██   █████  ██ ██ ██ ██████    ███
+   ██   ██      ████  ██ ██       ██ ██
+   ██   ███████  ██████  ██      ██   ██
+
+
+*/
+@media screen and (min-width: 720px){    
+    .titulo__avatar {
+        height: 150px;
+        width: 150px;
+    }
+
+    .titulo {
+        align-self: center;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    .menu {
+        display: flex;
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .contato {
+        display: block;
+        padding: 0 10px 0 10px;
+        align-self: center;
+    }
+
+    .contato-item, .menu-item {
+        font-size: 18px;
+    }
+
+    .cardapio {
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .imagem--lanche {
+        width: 240px;
+        height: 240px;
+    } 
+    
+    .formulario-contato {
+        width: 640px;
+        margin: 0 auto;
+    }
+    
     .popup__horario.opened {
         width: 600px;
         align-items: center;
     }
-}
 
+    .enviar {
+        width: 200px;
+    }
+}
+/*
+ ██ ██   ██ ██   ██  ██████  ██████  ██   ██
+███ ██   ██ ██   ██ ██  ████ ██   ██  ██ ██
+ ██ ███████ ███████ ██ ██ ██ ██████    ███
+ ██      ██      ██ ████  ██ ██       ██ ██
+ ██      ██      ██  ██████  ██      ██   ██
+
+
+*/
 @media screen and (min-width: 1440px){
+    
+    .titulo {
+        font-size: 36px;
+    }
+    
+    .titulo__avatar {
+        height: 200px;
+        width: 200px;
+    }
+    
+    .cardapio {
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .imagem--lanche {
+        width: 340px;
+        height: 340px;
+    }
+
+    .contato-item, .menu-item {
+        font-size: 26px;
+    }
+
+    .contato {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        gap: 1.5rem;
+        font-size: 40px;
+        font-size: 32px;
+    }
+    
+    .formulario-contato {
+        width: 940px;
+        margin: 0 auto;
+    }
+
     .popup__horario.opened {
         width: 800px;
         align-items: center;
     }
+    
+    .qr__acesse--site, .qr__cardapio {
+        width: 150px;
+        height: 150px;
+        margin: 20px 0;
+    }
+    
 }
