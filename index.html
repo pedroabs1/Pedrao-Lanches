@@ -8,6 +8,10 @@
         <link rel="icon" href="img\avatar pedro 100perc.png" type="image/icon type">
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="Theme-color" content="#FFFFFF">
     </head>
 
     <body>
@@ -97,6 +101,17 @@
         </main>
         <script src="script.js">
             // document.write(dt) /*escreve a data no documento html*/
+        </script>
+        <script type="text/javascript">
+            if ('ServiceWorker' in navigator){
+                console.log("Will the service worker register?");
+                navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg){
+                    console.log("Yes i did.");
+                }).cartch(function(err){
+                    console.log("No didn't. This happened: ", err);
+                });
+            }
         </script>
     </body>
     <footer>
