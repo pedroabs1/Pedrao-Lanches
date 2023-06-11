@@ -100,9 +100,9 @@
 
 
 */
-.cardapio {
+.itens_cardapio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* gap: .1rem; */
@@ -118,13 +118,18 @@
 }
 
 .imagem--lanche {
-    width: 120px;
-    height: 120px;
+    width: 280px;
+    height: 180px;
+    margin: auto;
 }
 
 .descricao--lanche, .titulo--lanche {
     list-style-type: none;
     padding: 10px;
+}
+
+.ingredientes--lanche {
+    list-style-type: none;
 }
 
 .container__comprar {
@@ -368,7 +373,7 @@ td{
         width: 100%;
     }
 
-    .cardapio {
+    .itens_cardapio {
         /* display: flex; */
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -424,7 +429,7 @@ td{
         height: 400px;
         width: 100%;
     }
-    .cardapio {
+    .itens_cardapio {
         /* display: flex; */
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -435,6 +440,7 @@ td{
     .imagem--lanche {
         width: 340px;
         height: 340px;
+        margin: auto;
     }
 
     .contato-item, .menu-item {
