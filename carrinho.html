@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <title>Pedrão Lanches! -- Carrinho</title>
+        <link
+            rel="icon"
+            href="img\avatar pedro 100perc.png"
+            type="image/icon type"
+        />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <h1 class="titulo">Pedrão Lanches!</h1>
+            <img
+                class="titulo__avatar"
+                src="img/avatar pedro 100perc.png"
+                alt="logo pedrao"
+                class="logo__pedrao"
+            />
+            <ul class="menu">
+                <a href="index.html" class="menu-item">Inicio</a>
+                <a href="cardapio.html" class="menu-item">Cardapio</a>
+                <a href="carrinho.html" class="menu-item">Carrinho</a>
+                <a href="contato.html" class="menu-item">Contato</a>
+                <a href="empresa.html" class="menu-item">Empresa</a>
+            </ul>
+            <ul class="contato">
+                <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+                <a href="https://wa.me/556792140820" class="contato-item"
+                    >(67) 91234-5678<img
+                        src="img/icon_whatsapp.svg"
+                        alt="logo whatsapp"
+                        class="logo__whatsapp"
+                /></a>
+                <a href="https://wa.me/556792140820" class="contato-item"
+                    >(67) 4234-5678<img
+                        src="img/icon_whatsapp.svg"
+                        alt="logo whatsapp"
+                        class="logo__whatsapp"
+                /></a>
+                <li class="contato-item">
+                    Para retirar no local das 18 as 01hrs
+                </li>
+            </ul>
+        </header>
+        <main>
+            <h2 class="titulo__principal">Seja bem vindo ao Pedrão Lanches!</h2>
+            <p class="missao__empresa">
+                Nossa missão é acabar com a sua fome não importando o tamanho
+                dela!
+            </p>
+            <img
+                src="img/lanche maos.png"
+                alt="duas mãos segurando lanche suculento"
+                class="imagem__principal"
+            />
+            <div class="container__checkout">
+                <div class="formulario-contato">
+                    <form>
+                        <label for="nomeesobrenome">Nome e sobrenome</label>
+                        <input
+                            id="nomeesobrenome"
+                            type="email"
+                            class="input-padrao"
+                            required
+                            placeholder="Pedro Augusto"
+                        />
+
+                        <label for="email">E-mail</label>
+                        <input
+                            id="email"
+                            type="text"
+                            class="input-padrao"
+                            required
+                            placeholder="seu_email@dominio.com"
+                        />
+
+                        <label for="endereco">endereco</label>
+                        <input
+                            id="endereco"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="Rua da Independencia"
+                        />
+                        <label for="numero">numero</label>
+                        <input
+                            id="numero"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="502"
+                        />
+                        <label for="bairro">bairro</label>
+                        <input
+                            id="bairro"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="Santa Lucia"
+                        />
+                        <label for="referencia">referencia</label>
+                        <input
+                            id="referencia"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="Casa ao lado da igreja"
+                        />
+                        <label for="telefone">telefone</label>
+                        <input
+                            id="telefone"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="(67) xxxxx-xxxx"
+                        />
+                        <label
+                            ><input
+                                class="checkbox"
+                                type="checkbox"
+                                checked
+                            />   Gostaria de receber nossas novidades por
+                            e-mail?</label
+                        >
+                        <input
+                            type="submit"
+                            value="Enviar Formulario"
+                            class="enviar"
+                        />
+                    </form>
+                </div>
+                <div class="container__formas_pagamento">
+                    <h3 class="titulo_pagamento">Nossas formas de pagamento!</h3>
+                    <div class="card_formas_pagamento"><img class="icon_payment" src="./img/icon_cash.svg" />
+                    <img
+                        class="icon_payment"
+                        src="./img/icon_pix_banco_Central.svg"
+                    />
+                    <img class="icon_payment" src="./img/icon_visa.svg" />
+                    <img class="icon_payment" src="./img/icon_mc_symbol.svg" />
+                    <img class="icon_payment" src="./img/icon_elo2.svg" />
+                    <img
+                        class="icon_payment"
+                        src="./img/icon_mercado-pago.svg"
+                    />
+                    <img class="icon_payment" src="./img/icon_pagseguro.svg" />
+                    <img class="icon_payment" src="./img/icon_paypal.svg" />
+                    <!-- <img class="icon_payment" src="./img/icon_bitcoin-gold-coin.svg"> -->
+                    <img class="icon_payment" src="./img/icon_bitcoin.svg" />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <h4 class="since">Desde 2023 matando a sua fome</h4>
+        <h5 class="autor">Designed by pedroabs1</h5>
+    </footer>
+</html>

@@ -1,3 +1,11 @@
+/* * {
+    outline: 1px solid red;
+}  */
+/* 
+html {
+    width: 90%;
+} */
+
 /*
 ██   ██ ███████  █████  ██████  ███████ ██████
 ██   ██ ██      ██   ██ ██   ██ ██      ██   ██
@@ -16,19 +24,10 @@
     /* justify-content: space-between;    */
     width: 100vw;
     margin: 0;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
-.titulo {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    padding: 10px;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    
-}
- /*
+/*
  ████████ ██ ████████ ██    ██ ██       ██████
     ██    ██    ██    ██    ██ ██      ██    ██
     ██    ██    ██    ██    ██ ██      ██    ██
@@ -38,6 +37,17 @@
 
  */
 
+.titulo {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding: 10px;
+    font-size: 28px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    font-weight: bold;
+}
+
 .titulo__avatar {
     height: 100px;
     width: 100px;
@@ -46,25 +56,37 @@
 
 .menu {
     grid-row: 2/3;
-    grid-column: 1/span 3;
+    grid-column: 1 / span 3;
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
     align-items: center;
     font-size: 16px;
     font-weight: bold;
     justify-content: space-evenly;
     margin: auto;
+    padding-bottom: 10px;
+}
+.icone__menu {
+    width: 18px;
+    margin-right: 5px;
 }
 
 .imagem__principal {
     height: 200px;
     width: 100%;
+    margin: auto;
+}
+
+.titulo__principal {
+    font-size: 32px;
+    padding: 40px;
 }
 
 .missao__empresa {
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
+    padding: 10px;
 }
 
 /*
@@ -81,12 +103,18 @@
     list-style-type: none;
 }
 
-.contato-item, .menu-item {
+.contato-item,
+.menu-item {
     text-decoration: none;
+    padding-top: 10px;
+}
+a.contato-item {
+    color: blue;
+    text-decoration: underline;
 }
 
 .logo__whatsapp {
-    width: 15px;
+    width: 30px;
     font-weight: 15px;
     padding: 0 5px 0 5px;
 }
@@ -123,7 +151,8 @@
     margin: auto;
 }
 
-.descricao--lanche, .titulo--lanche {
+.descricao--lanche,
+.titulo--lanche {
     list-style-type: none;
     padding: 10px;
 }
@@ -169,17 +198,21 @@
     margin-top: 20px;
 }
 
-.qr__acesse--site, .qr__cardapio {
+.qr__acesse--site,
+.qr__cardapio {
     width: 150px;
     height: 150px;
     margin: 20px 0 0 0;
 }
 
-.acesse--site, .acesse--cardapio {
+.acesse--site,
+.acesse--cardapio {
     margin: 5px 0;
 }
-.since, .autor {
+.since,
+.autor {
     text-align: left;
+    margin-left: 30px;
 }
 .since {
     margin-top: 50px;
@@ -188,6 +221,51 @@
 .autor {
     margin-top: 10px;
 }
+/*
+ ██████ ██   ██ ███████  ██████ ██   ██  ██████  ██    ██ ████████
+██      ██   ██ ██      ██      ██  ██  ██    ██ ██    ██    ██
+██      ███████ █████   ██      █████   ██    ██ ██    ██    ██
+██      ██   ██ ██      ██      ██  ██  ██    ██ ██    ██    ██
+ ██████ ██   ██ ███████  ██████ ██   ██  ██████   ██████     ██
+
+*/
+
+.container__checkout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
+    width: 100%;
+}
+
+.container__formas_pagamento {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 30px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: space-between; */
+
+}
+
+.titulo_pagamento {
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card_formas_pagamento {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+}
+
+.icon_payment {
+    width: 60px;
+    height: 40px;
+    margin: 10px 10px;
+}
+
 /*
 ██████   ██████  ██████  ██    ██ ██████
 ██   ██ ██    ██ ██   ██ ██    ██ ██   ██
@@ -202,8 +280,8 @@
     z-index: -1;
     opacity: 0;
     display: none;
-    }
-    
+}
+
 .popup__container.opened {
     width: 100vw;
     height: 100vh;
@@ -218,10 +296,20 @@
     z-index: 999;
     opacity: 1;
     display: flex;
-}   
+}
+
+.icone--aviso {
+    width: 60px;
+}
 
 .botao {
     font-size: 16px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: grey;
+    color: black;
 }
 
 .popup__texto {
@@ -232,7 +320,7 @@
 .popup__horario {
     z-index: -1;
     opacity: 0;
-    transform: scale(.4);
+    transform: scale(0.4);
 }
 
 .popup__horario.opened {
@@ -242,7 +330,7 @@
     border-radius: 8px;
     text-align: center;
     align-items: center;
-    width: 90vw;
+    width: 100vw;
     box-sizing: border-box;
     z-index: 999;
     opacity: 1;
@@ -259,28 +347,34 @@
 
 */
 .formulario-contato {
-    width: 240px;
+    width: 300px;
     margin: 0 auto;
+    /* grid-row: 1/2; */
+    /* grid-column: 1/2; */
 }
 
-form, table {
+form,
+table {
     margin: 50px 30px;
 }
 
-form label, form legend{
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-.input-padrao{
+.input-padrao {
     display: block;
     margin: 0 0 10px;
     padding: 10px 25px;
-    width: 90%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-.checkbox{
+.checkbox {
     margin: 20px 0;
 }
 
@@ -297,19 +391,19 @@ form label, form legend{
     cursor: pointer;
 }
 
-.enviar:hover{
+.enviar:hover {
     background: darkorange;
     transform: scale(1.2); /*rotate(70deg); */
-    transform: matrix3d(1,2);
+    transform: matrix3d(1, 2);
 }
 
-th{
+th {
     background-color: #6d6b6b;
     border: solid 1px;
     padding: 8px 15px;
 }
 
-td{
+td {
     border: solid 1px;
     /* background-color: #d6d4d4; */
     padding: 8px 15px;
@@ -337,7 +431,7 @@ td{
 
 
 */
-@media screen and (min-width: 720px){    
+@media screen and (min-width: 720px) {
     .titulo__avatar {
         height: 150px;
         width: 150px;
@@ -347,7 +441,7 @@ td{
         align-self: center;
         justify-content: center;
         margin: 0;
-
+        font-size: 56px;
     }
 
     .menu {
@@ -364,7 +458,8 @@ td{
         align-self: center;
     }
 
-    .contato-item, .menu-item {
+    .contato-item,
+    .menu-item {
         font-size: 18px;
     }
 
@@ -385,11 +480,34 @@ td{
         width: 240px;
         height: 240px;
         margin: auto;
-    } 
-    
+    }
+
     .formulario-contato {
-        width: 640px;
+        width: 50vw;
         margin: 0 auto;
+    }
+
+    .container__checkout {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+
+    .container__formas_pagamento {
+        margin: 50px 20px;
+        height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-evenly;
+    }
+
+    .titulo_pagamento {
+        padding: 10px 0px 0px 32px;
+        font-size: 22px;
+    }
+
+    .icon_payment {
+        margin: 10px 27px;
     }
     
     .popup__horario.opened {
@@ -414,19 +532,18 @@ td{
 
 
 */
-@media screen and (min-width: 1440px){
-    
+@media screen and (min-width: 1440px) {
     .titulo {
-        font-size: 36px;
+        font-size: 80px;
     }
-    
+
     .titulo__avatar {
         height: 200px;
         width: 200px;
     }
 
     .imagem__principal {
-        height: 400px;
+        height: 500px;
         width: 100%;
     }
     .itens_cardapio {
@@ -443,7 +560,8 @@ td{
         margin: auto;
     }
 
-    .contato-item, .menu-item {
+    .contato-item,
+    .menu-item {
         font-size: 26px;
     }
 
@@ -457,9 +575,23 @@ td{
         font-size: 40px;
         font-size: 32px;
     }
+
+    .icone__menu {
+        width: 26px;
+        margin-right: 5px;
+    }
     
+
+    .titulo__principal {
+        font-size: 32px;
+    }
+    
+    .missao__empresa {
+        font-size: 24px;
+    }
+
     .formulario-contato {
-        width: 940px;
+        width: 50vw;
         margin: 0 auto;
     }
 
@@ -472,10 +604,10 @@ td{
         flex-direction: row;
     }
 
-    .qr__acesse--site, .qr__cardapio {
+    .qr__acesse--site,
+    .qr__cardapio {
         width: 150px;
         height: 150px;
         margin: 20px 0;
     }
-    
 }

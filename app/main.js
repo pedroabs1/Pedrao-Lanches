@@ -10,6 +10,8 @@ async function atualizarCardapio() {
     const res = await fetch(api);
     cardapio = await res.json();
     exibirCardapio(cardapio);
+
+    
 }
 
 //FAZER pagina de checkout e formulario de pagamento por cartao
@@ -33,5 +35,7 @@ async function atualizarCardapio() {
 //FAZER sistema e pagina de acompanhamento de entrega
 
 //FAZER solicitar instalar web app atalho tea inicial apos terceiro acesso
+
+//FAZER     solicitar usar localização para completar endereço
 
 //FAZER melhorar ux ui aparencia e funcionalidade do site
