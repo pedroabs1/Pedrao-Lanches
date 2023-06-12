@@ -108,6 +108,12 @@ html {
     text-decoration: none;
     padding-top: 10px;
 }
+
+.contato-item:hover,
+.menu-item:hover {
+    scale: 1.2;
+    /* color: #c0c0c0; */
+}
 a.contato-item {
     color: blue;
     text-decoration: underline;
@@ -193,7 +199,7 @@ a.contato-item {
     text-align: center;
     background-color: #afafaf;
     border-radius: 10px;
-    width: 250px;
+    width: 200px;
     margin: auto;
     margin-top: 20px;
 }
@@ -482,16 +488,21 @@ td {
         margin: auto;
     }
 
-    .formulario-contato {
-        width: 50vw;
-        margin: 0 auto;
-    }
-
     .container__checkout {
         display: grid;
         grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 1fr);
         width: 100%;
     }
+    
+    .formulario-contato {
+        width: 50vw;
+        margin: 0 auto;
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    
 
     .container__formas_pagamento {
         margin: 50px 20px;
@@ -499,6 +510,8 @@ td {
         display: flex;
         flex-wrap: wrap;
         align-items: space-evenly;
+        grid-column: 2/3;
+        grid-row: 1/2;
     }
 
     .titulo_pagamento {
@@ -508,6 +521,11 @@ td {
 
     .icon_payment {
         margin: 10px 27px;
+    }
+
+    .pix{
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
     
     .popup__horario.opened {

@@ -16,9 +16,11 @@ async function atualizarCardapio() {
 
 //FAZER pagina de checkout e formulario de pagamento por cartao
 
-//FAZER QR code whatsapp
+//CORRIGIR formatação qr code index
 
-//FAZER QR code pagamento
+//FAZER hover botoes menu
+
+//FAZER QR code pagamento pix
 
 //FAZER  pix copia e cola
 
@@ -29,8 +31,6 @@ async function atualizarCardapio() {
 //FAZER armazenar ultimos endereços no localStorage
 
 //FAZER badges play store e app store
-
-//FAZER alterar icone webapp instalado 
 
 //FAZER sistema e pagina de acompanhamento de entrega
 
