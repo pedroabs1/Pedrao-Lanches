@@ -26,16 +26,16 @@ async function atualizarCardapio() {
 
 //FAZER api viacep 
 
-//FAZER  armazenar ultimos endereços no localStorage
+//FAZER armazenar ultimos endereços no localStorage
 
 //FAZER badges play store e app store
 
-//FAZER web app
+//FAZER alterar icone webapp instalado 
 
 //FAZER sistema e pagina de acompanhamento de entrega
 
 //FAZER solicitar instalar web app atalho tea inicial apos terceiro acesso
 
-//FAZER     solicitar usar localização para completar endereço
+//FAZER solicitar usar localização para completar endereço api
 
 //FAZER melhorar ux ui aparencia e funcionalidade do site
