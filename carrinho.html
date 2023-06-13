@@ -10,8 +10,8 @@
             href="img\avatar pedro 100perc.png"
             type="image/icon type"
         />
-        <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
 
     <body>
@@ -62,27 +62,42 @@
                 class="imagem__principal"
             />
             <div class="container__checkout">
-                <div class="formulario-contato">
-                    <form>
-                        <label for="nomeesobrenome">Nome e sobrenome</label>
+                <div class="container__formulario-contato">
+                    <form class="formulario-contato" data-carrinho>
+                <fieldset class="formulario__campo">
+                    <label for="nomeesobrenome">Nome e Sobrenome</label>
                         <input
                             id="nomeesobrenome"
-                            type="email"
+                            type="text"
                             class="input-padrao"
                             required
                             placeholder="Pedro Augusto"
                         />
-
-                        <label for="email">E-mail</label>
+                    </fieldset>
+                <fieldset class="formulario__campo">
+                        <label for="cpf">CPF ou CNPJ</label>
                         <input
-                            id="email"
+                            id="cpf"
                             type="text"
                             class="input-padrao"
                             required
-                            placeholder="seu_email@dominio.com"
+                            placeholder="123.456.789-12 / 12.345.678.9012-34"
                         />
-
-                        <label for="endereco">endereco</label>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+    
+                        <label for="telefone">Telefone</label>
+                        <input
+                            id="telefone"
+                            type="tel"
+                            class="input-padrao"
+                            required
+                            placeholder="(67) 91234-5678"
+                        />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+    
+                        <label for="endereco">Endereço</label>
                         <input
                             id="endereco"
                             type="tel"
@@ -90,7 +105,10 @@
                             required
                             placeholder="Rua da Independencia"
                         />
-                        <label for="numero">numero</label>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+    
+                        <label for="numero">Número</label>
                         <input
                             id="numero"
                             type="tel"
@@ -98,42 +116,51 @@
                             required
                             placeholder="502"
                         />
-                        <label for="bairro">bairro</label>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+    
+                        <label for="bairro">Bairro</label>
                         <input
                             id="bairro"
-                            type="tel"
+                            type="text"
                             class="input-padrao"
                             required
                             placeholder="Santa Lucia"
                         />
-                        <label for="referencia">referencia</label>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+    
+                        <label for="referencia">Referência</label>
                         <input
                             id="referencia"
-                            type="tel"
+                            type="text"
                             class="input-padrao"
                             required
                             placeholder="Casa ao lado da igreja"
-                        />
-                        <label for="telefone">telefone</label>
-                        <input
-                            id="telefone"
-                            type="tel"
-                            class="input-padrao"
-                            required
-                            placeholder="(67) xxxxx-xxxx"
-                        />
+                        />   
+                        </fieldset>
+                        <fieldset class="formulario__termos">
+                            <input class="termos__input" type="checkbox" checked required>
+                            <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme
+                                descrito na Política
+                                de
+                                Privacidade do banco.</p>
+                            <span class="mensagem-erro"></span>
+                        </fieldset>
+        
                         <label
                             ><input
                                 class="checkbox"
                                 type="checkbox"
                                 checked
                             />   Gostaria de receber nossas novidades por
-                            e-mail?</label
+                            whatsapp?</label
                         >
                         <input
                             type="submit"
                             value="Enviar Formulario"
                             class="enviar"
+                            id="enviar"
                         />
                     </form>
                 </div>
@@ -157,7 +184,7 @@
                     <img class="icon_payment" src="./img/icon_bitcoin.svg" />
                     </div>
                 </div>
-                <div class="container__container--qr pix">
+                <div class="container__qr--pix">
                     <div class="container__qr">
                     <div class="container__acesse--site">
                         <img
@@ -167,6 +194,11 @@
                         />
                         <h3 class="acesse--site">Abra o app do seu banco e pague por pix</h3>
                     </div>
+            </div>
+            <button class="pixcopiaecola" onclick="pixCopiaeCola()">Copiar Pix</button>
+            <script src="app/copy.js"></script>
+            <script src="app/localStorage.js" type="module"></script>
+
             </div>
         </main>
     </body>

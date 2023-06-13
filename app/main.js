@@ -13,29 +13,38 @@ async function atualizarCardapio() {
 
     
 }
+// FAZER botao de comprar somar 1 item no carrinho 
 
-//FAZER pagina de checkout e formulario de pagamento por cartao
+//FAZER animação adicionar ao carrinho no menu
 
-//CORRIGIR formatação qr code index
+//FAZER lista e itens no carrinho/checkout 
 
-//FAZER hover botoes menu
+//IMPLEMENTAR observações nos produtos
 
-//FAZER QR code pagamento pix
+//FAZER implementar localstorage salvar ultimos pedidos (ver monibank)
 
-//FAZER  pix copia e cola
+//FAZER armazenar ultimos endereços no localStorage para uso futuro e enviar no whatsapp
 
-//FAZER implementar localstorage salvar ultimos pedidos ver monibank
+//FAZER contar numero de acessos 
 
-//FAZER api viacep 
+//FAZER solicitar instalar web app atalho tela inicial apos terceiro acesso
 
-//FAZER armazenar ultimos endereços no localStorage
+//FAZER formulario de pagamento por cartao
+
+//FAZER conta bitcoin 
+
+//FAZER pagseguro QR E LINK 
+
+//FAZER mercado pago qr E link 
+
+//FAZER link pix copia e cola
 
 //FAZER badges play store e app store
 
 //FAZER sistema e pagina de acompanhamento de entrega
 
-//FAZER solicitar instalar web app atalho tea inicial apos terceiro acesso
-
 //FAZER solicitar usar localização para completar endereço api
+
+//FAZER api viacep 
 
 //FAZER melhorar ux ui aparencia e funcionalidade do site
