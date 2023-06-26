@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Pedrão Lanches! -- Carrinho</title>
+    <link
+          rel="icon"
+          href="img\avatar pedro 100perc.png"
+          type="image/icon type" />
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script async src="../app/loja.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">Carrinho</h1>
+        <img
+             class="titulo__avatar"
+             src="../img/avatar pedro 100perc.png"
+             alt="logo pedrao"
+             class="logo__pedrao" />
+        <ul class="menu">
+            <a href="../pages/index.html" class="menu-item">
+                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
+            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Cardapio</a>
+            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Carrinho</a>
+            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Contato</a>
+            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Empresa</a>
+        </ul>
+        <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+        <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
+                 src="../img/icon_whatsapp.svg"
+                 alt="logo whatsapp"
+                 class="logo__whatsapp" /></a>
+        <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
+                 src="../img/icon_whatsapp.svg"
+                 alt="logo whatsapp"
+                 class="logo__whatsapp" /></a>
+        <li class="contato-item">
+            Para retirar no local das 18 as 01hrs
+        </li>
+        </ul>
+    </header>
+    <main>
+        <!-- <h2 class="titulo__principal">Carrinho</h2> -->
+        <p class="missao__empresa">
+            Nossa missão é acabar com a sua fome não importando o tamanho
+            dela!
+        </p>
+        <img
+             src="../img/lanche maos.png"
+             alt="duas mãos segurando lanche suculento"
+             class="imagem__principal" />
+        <div class="container__checkout">
+            <div class="container__formulario-contato">
+                <form class="formulario-contato" id="form-carrinho" data-carrinho>
+                    <fieldset class="formulario__campo">
+                        <label for="nome">Nome e Sobrenome</label>
+                        <input
+                               id="nome"
+                               type="text"
+                               class="input-padrao"
+                               required
+                               placeholder="Pedro Augusto" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label for="cpf">CPF ou CNPJ</label>
+                        <input
+                               id="cpf"
+                               type="text"
+                               class="input-padrao"
+                               required
+                               placeholder="123.456.789-12 / 12.345.678.9012-34" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+
+                        <label for="telefone">Telefone</label>
+                        <input
+                               id="telefone"
+                               type="tel"
+                               class="input-padrao"
+                               required
+                               placeholder="(67) 91234-5678" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+
+                        <label for="endereco">Endereço</label>
+                        <input
+                               id="endereco"
+                               type="tel"
+                               class="input-padrao"
+                               required
+                               placeholder="Rua da Independencia" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+
+                        <label for="numero">Número</label>
+                        <input
+                               id="numero"
+                               type="tel"
+                               class="input-padrao"
+                               required
+                               placeholder="502" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+
+                        <label for="bairro">Bairro</label>
+                        <input
+                               id="bairro"
+                               type="text"
+                               class="input-padrao"
+                               required
+                               placeholder="Santa Lucia" />
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+
+                        <label for="referencia">Referência</label>
+                        <input
+                               id="referencia"
+                               type="text"
+                               class="input-padrao"
+                               required
+                               placeholder="Casa ao lado da igreja" />
+                    </fieldset>
+                    <fieldset class="formulario__termos">
+                        <input class="termos__input" type="checkbox" checked required>
+                        <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados
+                            conforme
+                            descrito na Política
+                            de
+                            Privacidade do banco.</p>
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+
+                    <label><input
+                               class="checkbox"
+                               type="checkbox"
+                               checked /> Gostaria de receber nossas novidades por
+                        whatsapp?</label>
+                    <input
+                           type="submit"
+                           value="Enviar Formulario"
+                           class="enviar"
+                           id="enviar" />
+                </form>
+                <section class="container normal-section">
+                    <h2 class="section-titulo">Seu Pedido</h2>
+
+                    <table class="carrinho-tabela">
+                        <thead>
+                            <tr>
+                                <th class="tabela-head-item primeira-coluna">Item</th>
+                                <th class="tabela-head-item segunda-coluna">Preço</th>
+                                <th class="tabela-head-item terceira-coluna">Quantidade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="carrinho-produto">
+                                <td class="produto-identificacao">
+                                    <img src="images/produto2.png" alt="Miniatura" class="carrinho-produto-imagem">
+                                    <strong class="carrinho-produto-titulo">Miniatura</strong>
+                                </td>
+                                <td>
+                                    <span class="carrinho-produto-preco">R$69,90</span>
+                                </td>
+                                <td>
+                                    <input type="number" value="2" min="0" class="produto-qtd-input">
+                                    <button type="button" class="remove-produto-button">Remover</button>
+                                </td>
+                            </tr>
+                            <tr class="carrinho-produto">
+                                <td class="produto-identificacao">
+                                    <img src="images/poster3.png" alt="Poster 3" class="carrinho-produto-image">
+                                    <strong class="carrinho-produto-titulo">Poster 3</strong>
+                                </td>
+                                <td>
+                                    <span class="carrinho-produto-preco">R$19,99</span>
+                                </td>
+                                <td>
+                                    <input type="number" value="1" min="0" class="produto-qtd-input">
+                                    <button type="button" class="remove-produto-button">Remover</button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="carrinho-total-container">
+                                    <strong>Total</strong>
+                                    <span>R$159,90</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <button type="button" class="purchase-button">Finalizar Compra</button>
+                </section>
+                <div class="container__formas_pagamento">
+                    <h3 class="titulo_pagamento">Nossas formas de pagamento!</h3>
+                    <div class="card_formas_pagamento"><img class="icon_payment" src="./img/icon_cash.svg" />
+                        <img
+                             class="icon_payment"
+                             src="./img/icon_pix_banco_Central.svg" />
+                        <img class="icon_payment" src="./img/icon_visa.svg" />
+                        <img class="icon_payment" src="./img/icon_mc_symbol.svg" />
+                        <img class="icon_payment" src="./img/icon_elo2.svg" />
+                        <img
+                             class="icon_payment"
+                             src="./img/icon_mercado-pago.svg" />
+                        <img class="icon_payment" src="./img/icon_pagseguro.svg" />
+                        <img class="icon_payment" src="./img/icon_paypal.svg" />
+                        <!-- <img class="icon_payment" src="./img/icon_bitcoin-gold-coin.svg"> -->
+                        <img class="icon_payment" src="./img/icon_bitcoin.svg" />
+                    </div>
+                </div>
+                <div class="container__qr--pix">
+                    <div class="container__qr">
+                        <div class="container__acesse--site">
+                            <img
+                                 src="../img/QR_pix definir valor nubank pedro.png"
+                                 alt="qr code pagar por pix"
+                                 class="qr__acesse--site" />
+                            <h3 class="acesse--site">Abra o app do seu banco e pague por pix</h3>
+                        </div>
+                    </div>
+                    <button class="pixcopiaecola" onclick="pixCopiaeCola()">Copiar Pix</button>
+                    <script src="../app/copy.js"></script>
+                    <script src="../app/localStorage.js" type="module"></script>
+
+                </div>
+    </main>
+</body>
+<footer>
+    <h4 class="since">Desde 2023 matando a sua fome</h4>
+    <a href="https://github.com/pedroabs1" class="autor">Designed by pedroabs1</a>
+</footer>
+
+</html>

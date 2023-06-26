@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Pedrão Lanches! -- Inicio</title>
+    <link rel="icon" href="img\avatar pedro 100perc.png" type="image/icon type">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img\avatar pedro 100perc_144x144.png">
+    <meta name="Theme-color" content="#FFFFFF">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img
+             class="titulo__avatar"
+             src="../img/avatar pedro 100perc.png"
+             alt="logo pedrao"
+             class="logo__pedrao" />
+        <h1 class="titulo">Pedrão Lanches!</h1>
+        <ul class="menu">
+            <a href="../pages/index.html" class="menu-item">
+                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
+            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Cardapio</a>
+            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Carrinho</a>
+            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Contato</a>
+            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Empresa</a>
+        </ul>
+        <ul class="contato">
+            <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678
+                <img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678
+                <img
+                     src="../img//icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <li class="contato-item">
+                Para retirar no local das 18 as 01hrs
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h2 class="titulo__principal">Seja bem vindo ao Pedrão Lanches!</h2>
+        <p class="missao__empresa">
+            Nossa missão é acabar com a sua fome não importando o tamanho
+            dela!
+        </p>
+        <div class="popup__container opened" id="popup__container">
+            <div class="popup__horario opened" id="popup__horario">
+                <img
+                     src="../img/aviso.png"
+                     alt="icone de aviso"
+                     class="icone--aviso" />
+                <h2 class="popup__titulo--aviso">Aviso</h2>
+                <p class="popup__texto">
+                    Desculpe no momento estamos fechados.
+                </p>
+                <p class="popup__texto">
+                    Caso deseje poderá agendar um pedido para que possamos
+                    atende-lo o mais breve possivel.
+                </p>
+                <p class="popup__texto">
+                    Atendemos de segunda a domingo das 18 as 2hrs.
+                </p>
+                <button
+                        class="botao botao__agendar"
+                        type="submit"
+                        onclick="location.href='cardapio.html'">
+                    Agendar
+                </button>
+                <button
+                        class="botao botao__fechar"
+                        type="submit"
+                        onclick="handlePopup(false)">
+                    Fechar
+                </button>
+            </div>
+        </div>
+
+        <img
+             src="../img/lanche maos.png"
+             alt="duas mãos segurando lanche suculento"
+             class="imagem__principal" />
+    </main>
+    <script src="../app/popUp.js">
+            // document.write(dt) /*escreve a data no documento html*/
+    </script>
+    <script type="text/javascript">
+        if ('ServiceWorker' in navigator) {
+            console.log("Will the service worker register?");
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) {
+                    console.log("Yes i did.");
+                }).cartch(function (err) {
+                    console.log("No didn't. This happened: ", err);
+                });
+        }
+    </script>
+</body>
+<footer>
+    <div class="container__container--qr">
+        <div class="container__qr">
+            <div class="container__acesse--site">
+                <img
+                     src="../img/QR_Pedrão_Lanches.png"
+                     alt="qr code acesse nosso site"
+                     class="qr__acesse--site" />
+                <h3 class="acesse--site">Acesse nosso site</h3>
+            </div>
+        </div>
+        <div class="container__qr">
+            <div class="container__acesse--cardapio">
+                <img
+                     src="../img/QR_cardapio_Pedrao_Lanches.png"
+                     alt="qr code cardapio"
+                     class="qr__cardapio" />
+                <h3 class="acesse--cardapio">Acesse nosso cardapio</h3>
+            </div>
+        </div>
+    </div>
+    <h2 class="since">Desde 2023 matando a sua fome</h2>
+    <a href="https://github.com/pedroabs1" class="autor">Designed by pedroabs1</a>
+</footer>
+
+</html>

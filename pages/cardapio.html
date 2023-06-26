@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Pedrão Lanches! -- Cardapio</title>
+    <link
+          rel="icon"
+          href="img\avatar pedro 100perc.png"
+          type="image/icon type" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script async src="../app/addToCart.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img
+             class="titulo__avatar"
+             src="../img/avatar pedro 100perc.png"
+             alt="logo pedrao"
+             class="logo__pedrao" />
+        <h1 class="titulo">Nosso Cardapio</h1>
+        <ul class="menu">
+            <a href="../pages/index.html" class="menu-item">
+                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
+            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Cardapio</a>
+            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Carrinho</a>
+            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Contato</a>
+            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Empresa</a>
+        </ul>
+        <ul class="contato">
+            <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <li class="contato-item">
+                Para retirar no local das 18 as 01hrs
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h2 class="titulo__principal">Nosso Cardapio</h2>
+        <!-- <div class="container__cardapio">
+            <div id="itens_cardapio" class="itens_cardapio"> -->
+
+        <!--
+███████ ███████ ████████  ██████ ██   ██ ███████ ██████      ██ ████████ ███████ ███    ███ ███████
+██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ████  ████ ██
+█████   █████      ██    ██      ███████ █████   ██   ██     ██    ██    █████   ██ ████ ██ ███████
+██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ██  ██  ██      ██
+██      ███████    ██     ██████ ██   ██ ███████ ██████      ██    ██    ███████ ██      ██ ███████
+
+
+-->
+
+        <!-- modelos de pizza na lista e no carrinho -->
+        <div class="models">
+
+            <!-- pizza na lista -->
+            <div class="pizza-item">
+                <a href="">
+                    <div class="pizza-item--img"><img src="" /></div>
+                    <div class="pizza-item--add">+</div>
+                </a>
+                <div class="pizza-item--price">R$ --</div>
+                <div class="pizza-item--name">--</div>
+                <div class="pizza-item--desc">--</div>
+            </div>
+
+            <!-- pizza no carrinho -->
+            <div class="cart--item">
+                <img src="" />
+                <div class="cart--item-nome">--</div>
+                <div class="cart--item--qtarea">
+                    <button class="cart--item-qtmenos">-</button>
+                    <div class="cart--item--qt">1</div>
+                    <button class="cart--item-qtmais">+</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- /models -->
+
+        <!-- .menu-openner aparecera no modo mobile -->
+        <header>
+            <h1>Pizzaria da Nonna</h1>
+            <div class="menu-openner"><span>0</span>🛒</div>
+        </header>
+        <!-- /menu-openner -->
+
+        <!-- conteudo principal -->
+        <main>
+
+            <h2>Pizzas</h2>
+
+            <div class="pizza-area"></div>
+        </main>
+        <!-- /conteudo principal -->
+
+        <!--
+     █████  ███████ ██ ██████  ███████
+    ██   ██ ██      ██ ██   ██ ██
+    ███████ ███████ ██ ██   ██ █████
+    ██   ██      ██ ██ ██   ██ ██
+    ██   ██ ███████ ██ ██████  ███████
+
+
+    -->
+        <!-- aside do carrinho -->
+        <aside>
+            <div class="cart--area">
+                <div class="menu-closer">❌</div>
+                <h1>Suas lanches</h1>
+                <div class="cart"></div>
+                <div class="cart--details">
+                    <div class="cart--totalitem subtotal">
+                        <span>Subtotal</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem desconto">
+                        <span>Desconto</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem total big">
+                        <span>Total</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--finalizar">Finalizar a compra</div>
+                </div>
+            </div>
+        </aside>
+        <!-- /aside do carrinho -->
+
+
+        <!--
+███    ███  ██████  ██████   █████  ██
+████  ████ ██    ██ ██   ██ ██   ██ ██
+██ ████ ██ ██    ██ ██   ██ ███████ ██
+██  ██  ██ ██    ██ ██   ██ ██   ██ ██
+██      ██  ██████  ██████  ██   ██ ███████
+
+
+-->
+        <!-- janela modal -->
+        <div class="modal">
+            <div class="modalBody">
+                <div class="lanche--cancelMobileButton">Voltar</div>
+                <div class="lancheBig">
+                    <img src="" />
+                </div>
+                <div class="lanche">
+                    <h1>--</h1>
+                    <div class="lanche--desc">--</div>
+                    <div class="lanche--sizearea">
+                        <div class="lanche--sector">Tamanho</div>
+                        <div class="lanche--sizes">
+                            <div data-key="P" class="lanche--size">PEQUENA <span>--</span></div>
+                            <div data-key="M" class="lanche--size">MÉDIA <span>--</span></div>
+                            <div data-key="G" class="lanche--size selected">GRANDE <span>--</span></div>
+                        </div>
+                    </div>
+                    <div class="lanche--pricearea">
+                        <div class="lanche--sector">Preço</div>
+                        <div class="lanche--price">
+                            <div class="lanche--actualPrice">R$ --</div>
+                            <div class="lanche--qtarea">
+                                <button class="lanche--qtmenos">-</button>
+                                <div class="lanche--qt">1</div>
+                                <button class="lanche--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lanche--addButton">Adicionar ao carrinho</div>
+                    <div class="lanche--cancelButton">Cancelar</div>
+                </div>
+            </div>
+        </div>
+        <!-- /janela modal .modal -->
+        <!--
+    ███████  ██████ ██████  ██ ██████  ████████
+    ██      ██      ██   ██ ██ ██   ██    ██
+    ███████ ██      ██████  ██ ██████     ██
+         ██ ██      ██   ██ ██ ██         ██
+    ███████  ██████ ██   ██ ██ ██         ██
+
+
+    -->
+        <script src="../app/cardapio.js"></script>
+        <script src="../app/main.js"></script>
+        <script src="../app/forEach.js"></script>
+
+</body>
+<footer>
+    <h4 class="since">Desde 2023 matando a sua fome</h4>
+    <a href="https://github.com/pedroabs1" class="autor">Designed by pedroabs1</a>
+</footer>
+
+</html>

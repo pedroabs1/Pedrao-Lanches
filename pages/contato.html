@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Pedrão Lanches! -- Contato</title>
+    <link rel="icon" href="..\img\avatar pedro 100perc.png" type="image/icon type">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">Contato</h1>
+        <img class="titulo__avatar" src="../img/avatar pedro 100perc.png" alt="logo pedrao" class="logo__pedrao">
+        <ul class="menu">
+            <a href="../pages/index.html" class="menu-item">
+                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
+            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Cardapio</a>
+            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Carrinho</a>
+            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Contato</a>
+            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
+                     alt="icone de uma casa"
+                     class="icone__menu icone" />Empresa</a>
+        </ul>
+        <ul class="contato">
+            <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <li class="contato-item">Para retirar no local das 18 as 01hrs</li>
+        </ul>
+    </header>
+    <main>
+        <!-- <h2 class="titulo__principal">Contato</h2> -->
+        <p class="missao__empresa">Nossa missão é acabar com a sua fome não importando o tamanho dela!</p>
+        <img src="../img/lanche maos.png" alt="duas mãos segurando lanche suculento" class="imagem__principal">
+        <div class="formulario-contato">
+            <form>
+                <label for="nomeesobrenome">Nome e sobrenome</label>
+                <input id="nomeesobrenome" type="email" class="input-padrao" required>
+
+                <label for="email">E-mail</label>
+                <input id="email" type="text" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="tel" class="input-padrao" required placeholder="(67) xxxxx-xxxx">
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+
+                <fieldset class="contato">
+                    <legend>Como prefere o nosso contato?</legend>
+
+                    <label for="radio-whatsapp">
+                        <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp
+                    </label>
+
+                    <label for="radio-telefone">
+                        <input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone
+                    </label>
+
+                    <label for="radio-email">
+                        <input type="radio" name="contato" value="email" id="radio-email">E-mail
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Qual o horario prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+                <label><input class="checkbox" type="checkbox" checked>Gostaria de receber nossas novidades por
+                    e-mail?</label>
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário de atendimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda a Domingo</td>
+                        <td>18 ~ 2h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<footer>
+    <h4 class="since">Desde 2023 matando a sua fome</h4>
+    <h5 class="autor">Designed by pedroabs1</h5>
+</footer>
+
+</html>
