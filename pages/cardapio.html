@@ -23,6 +23,10 @@
              alt="logo pedrao"
              class="logo__pedrao" />
         <h1 class="titulo">Nosso Cardapio</h1>
+        <!-- .menu-openner aparecera no modo mobile -->
+        <div class="menu-openner"><span>0</span>🛒</div>
+        <!-- /menu-openner -->
+
         <ul class="menu">
             <a href="../pages/index.html" class="menu-item">
                 <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
@@ -53,37 +57,22 @@
                 Para retirar no local das 18 as 01hrs
             </li>
         </ul>
-    </header>
-    <main>
-        <h2 class="titulo__principal">Nosso Cardapio</h2>
-        <!-- <div class="container__cardapio">
-            <div id="itens_cardapio" class="itens_cardapio"> -->
 
-        <!--
-███████ ███████ ████████  ██████ ██   ██ ███████ ██████      ██ ████████ ███████ ███    ███ ███████
-██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ████  ████ ██
-█████   █████      ██    ██      ███████ █████   ██   ██     ██    ██    █████   ██ ████ ██ ███████
-██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ██  ██  ██      ██
-██      ███████    ██     ██████ ██   ██ ███████ ██████      ██    ██    ███████ ██      ██ ███████
-
-
--->
-
-        <!-- modelos de pizza na lista e no carrinho -->
+        <!-- modelos de lanche na lista e no carrinho -->
         <div class="models">
 
-            <!-- pizza na lista -->
-            <div class="pizza-item">
+            <!-- lanche na lista -->
+            <div class="lanche-item">
                 <a href="">
-                    <div class="pizza-item--img"><img src="" /></div>
-                    <div class="pizza-item--add">+</div>
+                    <div class="lanche-item--img"><img src="" /></div>
+                    <div class="lanche-item--add">+</div>
                 </a>
-                <div class="pizza-item--price">R$ --</div>
-                <div class="pizza-item--name">--</div>
-                <div class="pizza-item--desc">--</div>
+                <div class="lanche-item--price">R$ --</div>
+                <div class="lanche-item--name">--</div>
+                <div class="lanche-item--desc">--</div>
             </div>
 
-            <!-- pizza no carrinho -->
+            <!-- lanche no carrinho -->
             <div class="cart--item">
                 <img src="" />
                 <div class="cart--item-nome">--</div>
@@ -95,25 +84,28 @@
             </div>
 
         </div>
-        <!-- /models -->
+    </header>
+    <!-- /menu-openner -->
 
-        <!-- .menu-openner aparecera no modo mobile -->
-        <header>
-            <h1>Pizzaria da Nonna</h1>
-            <div class="menu-openner"><span>0</span>🛒</div>
-        </header>
-        <!-- /menu-openner -->
+    <!--
+███████ ███████ ████████  ██████ ██   ██ ███████ ██████      ██ ████████ ███████ ███    ███ ███████
+██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ████  ████ ██
+█████   █████      ██    ██      ███████ █████   ██   ██     ██    ██    █████   ██ ████ ██ ███████
+██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ██  ██  ██      ██
+██      ███████    ██     ██████ ██   ██ ███████ ██████      ██    ██    ███████ ██      ██ ███████
+-->
 
-        <!-- conteudo principal -->
-        <main>
+    <!-- conteudo principal -->
+    <main>
 
-            <h2>Pizzas</h2>
+        <h2>Pizzas</h2>
 
-            <div class="pizza-area"></div>
-        </main>
-        <!-- /conteudo principal -->
+        <div class="lanche-area"></div>
+    </main>
+    <!-- /conteudo principal -->
 
-        <!--
+    <!-- /models -->
+    <!--
      █████  ███████ ██ ██████  ███████
     ██   ██ ██      ██ ██   ██ ██
     ███████ ███████ ██ ██   ██ █████
@@ -122,33 +114,33 @@
 
 
     -->
-        <!-- aside do carrinho -->
-        <aside>
-            <div class="cart--area">
-                <div class="menu-closer">❌</div>
-                <h1>Suas lanches</h1>
-                <div class="cart"></div>
-                <div class="cart--details">
-                    <div class="cart--totalitem subtotal">
-                        <span>Subtotal</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--totalitem desconto">
-                        <span>Desconto</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--totalitem total big">
-                        <span>Total</span>
-                        <span>R$ --</span>
-                    </div>
-                    <div class="cart--finalizar">Finalizar a compra</div>
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Suas lanches</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
                 </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
             </div>
-        </aside>
-        <!-- /aside do carrinho -->
+        </div>
+    </aside>
+    <!-- /aside do carrinho -->
 
 
-        <!--
+    <!--
 ███    ███  ██████  ██████   █████  ██
 ████  ████ ██    ██ ██   ██ ██   ██ ██
 ██ ████ ██ ██    ██ ██   ██ ███████ ██
@@ -157,42 +149,42 @@
 
 
 -->
-        <!-- janela modal -->
-        <div class="modal">
-            <div class="modalBody">
-                <div class="lanche--cancelMobileButton">Voltar</div>
-                <div class="lancheBig">
-                    <img src="" />
+    <!-- janela modal -->
+    <div class="lancheWindowArea">
+        <div class="lancheWindowBody">
+            <div class="lanche--cancelMobileButton">Voltar</div>
+            <div class="lancheBig">
+                <img src="" />
+            </div>
+            <div class="lanche">
+                <h1>--</h1>
+                <div class="lanche--desc">--</div>
+                <div class="lanche--sizearea">
+                    <div class="lanche--sector">Tamanho</div>
+                    <div class="lanche--sizes">
+                        <div data-key="P" class="lanche--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="lanche--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="lanche--size selected">GRANDE <span>--</span></div>
+                    </div>
                 </div>
-                <div class="lanche">
-                    <h1>--</h1>
-                    <div class="lanche--desc">--</div>
-                    <div class="lanche--sizearea">
-                        <div class="lanche--sector">Tamanho</div>
-                        <div class="lanche--sizes">
-                            <div data-key="P" class="lanche--size">PEQUENA <span>--</span></div>
-                            <div data-key="M" class="lanche--size">MÉDIA <span>--</span></div>
-                            <div data-key="G" class="lanche--size selected">GRANDE <span>--</span></div>
+                <div class="lanche--pricearea">
+                    <div class="lanche--sector">Preço</div>
+                    <div class="lanche--price">
+                        <div class="lanche--actualPrice">R$ --</div>
+                        <div class="lanche--qtarea">
+                            <button class="lanche--qtmenos">-</button>
+                            <div class="lanche--qt">1</div>
+                            <button class="lanche--qtmais">+</button>
                         </div>
                     </div>
-                    <div class="lanche--pricearea">
-                        <div class="lanche--sector">Preço</div>
-                        <div class="lanche--price">
-                            <div class="lanche--actualPrice">R$ --</div>
-                            <div class="lanche--qtarea">
-                                <button class="lanche--qtmenos">-</button>
-                                <div class="lanche--qt">1</div>
-                                <button class="lanche--qtmais">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lanche--addButton">Adicionar ao carrinho</div>
-                    <div class="lanche--cancelButton">Cancelar</div>
                 </div>
+                <div class="lanche--addButton">Adicionar ao carrinho</div>
+                <div class="lanche--cancelButton">Cancelar</div>
             </div>
         </div>
-        <!-- /janela modal .modal -->
-        <!--
+    </div>
+    <!-- /janela modal .modal -->
+    <!--
     ███████  ██████ ██████  ██ ██████  ████████
     ██      ██      ██   ██ ██ ██   ██    ██
     ███████ ██      ██████  ██ ██████     ██
@@ -201,9 +193,9 @@
 
 
     -->
-        <script src="../app/cardapio.js"></script>
-        <script src="../app/main.js"></script>
-        <script src="../app/forEach.js"></script>
+    <script src="../app/cardapio.js"></script>
+    <script src="../app/main.js"></script>
+    <script src="../app/forEach.js"></script>
 
 </body>
 <footer>

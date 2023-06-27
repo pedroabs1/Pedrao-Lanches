@@ -1,5 +1,5 @@
 let modalkey = 0;
-let quantPizzas = 0;
+let quantlanches = 0;
 let cart = 0;
 
 const seleciona = (elemento) => document.querySelector(elemento);
@@ -32,14 +32,14 @@ const botoesFechar = () => {
     );
 };
 
-const preencheDadosPizzas = (pizzaItem, item, index) => {
-    //preencher dados de cada pizza
+const preencheDadoslanches = (lancheItem, item, index) => {
+    //preencher dados de cada lanche
 
-    pizzaItem.setAttribute('data-key', index);
-    pizzaItem.querySelector('.pizza-item--img img').src = item.img;
-    pizzaItem.querySelector('.pizza-item--price').innerHTML = formatoReal(item.price[2]);
-    pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
-    pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+    lancheItem.setAttribute('data-key', index);
+    lancheItem.querySelector('.lanche-item--img img').src = item.img;
+    lancheItem.querySelector('.lanche-item--price').innerHTML = formatoReal(item.price[2]);
+    lancheItem.querySelector('.lanche-item--name').innerHTML = item.name;
+    lancheItem.querySelector('.lanche-item--desc').innerHTML = item.description;
 };
 
 const preencheDadosModal = (item) => {
@@ -51,14 +51,14 @@ const preencheDadosModal = (item) => {
 
 const pegarKey = (e) => {
     //.closest retorna o elemento mais proximo da classe selecionada
-    let key = e.target.closest('.pizza-item').getAttribute('data-key');
-    console.log('pizza clicada ' + key);
+    let key = e.target.closest('.lanche-item').getAttribute('data-key');
+    console.log('lanche clicada ' + key);
     console.log(cardapio[key]);
 
     //garantir que a quantidade inicial é 1
-    quantPizzas = 1;
+    quantlanches = 1;
 
-    //manter a informação que a pizza foi clicada
+    //manter a informação que a lanche foi clicada
     modalKey = key;
 
     return key;
@@ -96,14 +96,14 @@ const escolherTamanhoPreco = (key) => {
 const mudarQuantidade = () => {
     // Ações nos botões + e - da janela modal
     seleciona('.lanche--qtmais').addEventListener('click', () => {
-        quantPizzas++;
-        seleciona('.lanche--qt').innerHTML = quantPizzas;
+        quantlanches++;
+        seleciona('.lanche--qt').innerHTML = quantlanches;
     });
 
     seleciona('.lanche--qtmenos').addEventListener('click', () => {
-        if (quantPizzas > 1) {
-            quantPizzas--;
-            seleciona('.lanche--qt').innerHTML = quantPizzas;
+        if (quantlanches > 1) {
+            quantlanches--;
+            seleciona('.lanche--qt').innerHTML = quantlanches;
         }
     });
 };
@@ -114,15 +114,15 @@ const adicionarAoCarrinho = () => {
         console.log('Adicionar ao Carrinho');
 
         //pegar dados  da janela  modal atual
-        //qual pizza ? pegue o modal key para usar cardapio[modalKey]
-        console.log('pizza ' + modalKey);
+        //qual lanche ? pegue o modal key para usar cardapio[modalKey]
+        console.log('lanche ' + modalKey);
 
         //tamanho
         let size = seleciona('.lanche--size.selected').getAttribute('data-key');
         console.log('tamanho ' + size);
 
         //quantidade
-        console.log('quantidade ' + quantPizzas);
+        console.log('quantidade ' + quantlanches);
 
         //preco
         let price = seleciona('.lanche--actualPrice').innerHTML.replace('R$', '');
@@ -138,19 +138,19 @@ const adicionarAoCarrinho = () => {
 
         if (key > -1) {
             //se encontrar aumente a quantidade
-            cart[key].qt += quantPizzas;
+            cart[key].qt += quantlanches;
         } else {
-            //adicionar objeto pizza no carrinho
-            let pizza = {
+            //adicionar objeto lanche no carrinho
+            let lanche = {
                 identificador,
                 id: cardapio[modalKey].id,
                 size,
-                qt: quantPizzas,
+                qt: quantlanches,
                 price: parseFloat(price),
             };
-            cart.push(pizza);
-            console.log(pizza);
-            console.log('Sub total R$ ' + (pizza.qt * pizza.price).toFixed(2));
+            cart.push(lanche);
+            console.log(lanche);
+            console.log('Sub total R$ ' + (lanche.qt * lanche.price).toFixed(2));
         }
         fecharModal();
         abrirCarrinho();
@@ -201,8 +201,8 @@ const atualizarCarrinho = () => {
         //para preencher os itens do carrinho, calcular subtotal
         for (let i in cart) {
             //use o find para pegar o tiem por id
-            let pizzaItem = cardapio.find((item) => item.id == cart[i].id);
-            console.log(pizzaItem);
+            let lancheItem = cardapio.find((item) => item.id == cart[i].id);
+            console.log(lancheItem);
 
             //em cada item pegar o subtotal
             subtotal += cart[i].price * cart[i].qt;
@@ -212,12 +212,12 @@ const atualizarCarrinho = () => {
             let cartItem = seleciona('.models .cart--item').cloneNode(true);
             seleciona('.cart').append(cartItem);
 
-            let pizzaSizeName = cart[i].size;
-            let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+            let lancheSizeName = cart[i].size;
+            let lancheName = `${lancheItem.name} (${lancheSizeName})`;
 
             //preencher as informações
-            cartItem.querySelector('img').src = pizzaItem.img;
-            cartItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
+            cartItem.querySelector('img').src = lancheItem.img;
+            cartItem.querySelector('.cart--item-nome').innerHTML = lancheName;
             cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
 
             //selecioanr botões + e -
@@ -291,17 +291,17 @@ const finalizarCompra = () => {
 cardapioJson.map((item, index) => {
     // console.log(item)
 
-    let pizzaItem = document.querySelector('.models .pizza-item').cloneNode(true);
-    // console.log(pizzaItem)
+    let lancheItem = document.querySelector('.models .lanche-item').cloneNode(true);
+    // console.log(lancheItem)
 
-    document.querySelector('.pizza-area').append(pizzaItem);
+    document.querySelector('.lanche-area').append(lancheItem);
 
-    preencheDadosPizzas(pizzaItem, item, index);
+    preencheDadoslanches(lancheItem, item, index);
 
-    //quando a pizza for clicada
-    pizzaItem.querySelector('.pizza-item a').addEventListener('click', (e) => {
+    //quando a lanche for clicada
+    lancheItem.querySelector('.lanche-item a').addEventListener('click', (e) => {
         e.preventDefault();
-        console.log('clicou na pizza');
+        console.log('clicou na lanche');
 
         let chave = pegarKey(e);
 
@@ -312,7 +312,7 @@ cardapioJson.map((item, index) => {
         preencheTamanhos(chave);
 
         //definir quantidade inicial = 1
-        seleciona('.lanche--qt').innerHTML = quantPizzas;
+        seleciona('.lanche--qt').innerHTML = quantlanches;
 
         escolherTamanhoPreco(chave);
     });

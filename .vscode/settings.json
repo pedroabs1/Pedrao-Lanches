@@ -2,6 +2,9 @@
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#1073cf2d",
         "editor.lineHighlightBorder": "#9fced11f",
+        "minimap.selectionHighlight": "#00f7ff",
+        "minimap.findMatchHighlight": "#e711ff",
+        "scrollbarSlider.hoverBackground": "#fa2a1b",
         "minimap.background": "#00000000",
         "scrollbar.shadow": "#00000000",
         "activityBar.background": "#23b2dd",
