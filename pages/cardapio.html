@@ -17,32 +17,55 @@
 
 <body>
     <header class="cabecalho">
-        <img
-             class="titulo__avatar"
-             src="../img/avatar pedro 100perc.png"
-             alt="logo pedrao"
-             class="logo__pedrao" />
-        <h1 class="titulo">Nosso Cardapio</h1>
         <!-- .menu-openner aparecera no modo mobile -->
-        <div class="menu-openner"><span>0</span>🛒</div>
-        <!-- /menu-openner -->
 
-        <ul class="menu">
-            <a href="../pages/index.html" class="menu-item">
-                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
-            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Cardapio</a>
-            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Carrinho</a>
-            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Contato</a>
-            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Empresa</a>
-        </ul>
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <!-- <img src="../img/Menu.svg" alt=""> -->
+
+            <label for="menu" class="container__rotulo">
+                <!-- <span class="cabeçalho__menu-hamburguer container__imagem"></span> -->
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="../pages/index.html" class="menu-item">
+                        <img src="../img/icons8-home-100.png" alt="icone de uma casa"
+                             class="icone__menu icone" />Inicio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/cardapio.html" class="menu-item"><img
+                             src="../img/icons8-hamburger-30.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Cardapio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Carrinho</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Contato</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/empresa.html" class="menu-item"><img
+                             src="../img/icons8-food-truck-64 (2).png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Empresa</a>
+                </li>
+            </ul>
+            <h1 class="titulo">Nosso Cardapio</h1>
+            <img
+                 class="titulo__imagem-avatar"
+                 src="../img/avatar pedro 100perc.png"
+                 alt="logo pedrao"
+                 class="logo__pedrao" />
+            <div class="menu-openner"><span>0</span>🛒</div>
+        </div>
         <ul class="contato">
             <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
             <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
@@ -57,36 +80,36 @@
                 Para retirar no local das 18 as 01hrs
             </li>
         </ul>
-
-        <!-- modelos de lanche na lista e no carrinho -->
-        <div class="models">
-
-            <!-- lanche na lista -->
-            <div class="lanche-item">
-                <a href="">
-                    <div class="lanche-item--img"><img src="" /></div>
-                    <div class="lanche-item--add">+</div>
-                </a>
-                <div class="lanche-item--price">R$ --</div>
-                <div class="lanche-item--name">--</div>
-                <div class="lanche-item--desc">--</div>
-            </div>
-
-            <!-- lanche no carrinho -->
-            <div class="cart--item">
-                <img src="" />
-                <div class="cart--item-nome">--</div>
-                <div class="cart--item--qtarea">
-                    <button class="cart--item-qtmenos">-</button>
-                    <div class="cart--item--qt">1</div>
-                    <button class="cart--item-qtmais">+</button>
-                </div>
-            </div>
-
+        <!-- /menu-openner -->
         </div>
     </header>
     <!-- /menu-openner -->
+    <!-- modelos de lanche na lista e no carrinho -->
+    <div class="models">
 
+        <!-- lanche na lista -->
+        <div class="lanche-item">
+            <a href="">
+                <div class="lanche-item--img"><img src="" /></div>
+                <div class="lanche-item--add">+</div>
+            </a>
+            <div class="lanche-item--price">R$ --</div>
+            <div class="lanche-item--name">--</div>
+            <div class="lanche-item--desc">--</div>
+        </div>
+
+        <!-- lanche no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+
+    </div>
     <!--
 ███████ ███████ ████████  ██████ ██   ██ ███████ ██████      ██ ████████ ███████ ███    ███ ███████
 ██      ██         ██    ██      ██   ██ ██      ██   ██     ██    ██    ██      ████  ████ ██
