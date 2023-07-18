@@ -17,44 +17,69 @@
 
 <body>
     <header class="cabecalho">
-        <img
-             class="titulo__avatar"
-             src="../img/avatar pedro 100perc.png"
-             alt="logo pedrao"
-             class="logo__pedrao" />
-        <h1 class="titulo">Pedrão Lanches!</h1>
-        <ul class="menu">
-            <a href="../pages/index.html" class="menu-item">
-                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
-            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Cardapio</a>
-            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Carrinho</a>
-            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Contato</a>
-            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Empresa</a>
-        </ul>
+        <!-- .menu-openner aparecera no modo mobile -->
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <!-- <img src="../img/Menu.svg" alt=""> -->
+
+            <label for="menu" class="container__rotulo">
+                <!-- <span class="cabeçalho__menu-hamburguer container__imagem"></span> -->
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="../pages/index.html" class="menu-item">
+                        <img src="../img/icons8-home-100.png" alt="icone de uma casa"
+                             class="icone__menu icone" />Inicio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/cardapio.html" class="menu-item"><img
+                             src="../img/icons8-hamburger-30.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Cardapio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Carrinho</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Contato</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/empresa.html" class="menu-item"><img
+                             src="../img/icons8-food-truck-64 (2).png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Empresa</a>
+                </li>
+            </ul>
+        </div>
         <ul class="contato">
             <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
-            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678
-                <img
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
                      src="../img/icon_whatsapp.svg"
                      alt="logo whatsapp"
                      class="logo__whatsapp" /></a>
-            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678
-                <img
-                     src="../img//icon_whatsapp.svg"
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
+                     src="../img/icon_whatsapp.svg"
                      alt="logo whatsapp"
                      class="logo__whatsapp" /></a>
             <li class="contato-item">
                 Para retirar no local das 18 as 01hrs
             </li>
         </ul>
+        <!-- /menu-openner -->
+        </div>
+        <h1 class="titulo">Pedrão Lanches!</h1>
+        <img
+             class="titulo__avatar"
+             src="../img/avatar pedro 100perc.png"
+             alt="logo pedrao"
+             class="logo__pedrao" />
     </header>
     <main>
         <h2 class="titulo__principal">Seja bem vindo ao Pedrão Lanches!</h2>
@@ -98,6 +123,27 @@
              src="../img/lanche maos.png"
              alt="duas mãos segurando lanche suculento"
              class="imagem__principal" />
+
+        <div class="container__container--qr">
+            <div class="container__qr">
+                <div class="container__acesse--site">
+                    <img
+                         src="../img/QR_Pedrão_Lanches.png"
+                         alt="qr code acesse nosso site"
+                         class="qr__acesse--site" />
+                    <h3 class="acesse--site">Acesse nosso site</h3>
+                </div>
+            </div>
+            <div class="container__qr">
+                <div class="container__acesse--cardapio">
+                    <img
+                         src="../img/QR_cardapio_Pedrao_Lanches.png"
+                         alt="qr code cardapio"
+                         class="qr__cardapio" />
+                    <h3 class="acesse--cardapio">Acesse nosso cardapio</h3>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="../app/popUp.js">
             // document.write(dt) /*escreve a data no documento html*/
@@ -115,28 +161,17 @@
     </script>
 </body>
 <footer>
-    <div class="container__container--qr">
-        <div class="container__qr">
-            <div class="container__acesse--site">
-                <img
-                     src="../img/QR_Pedrão_Lanches.png"
-                     alt="qr code acesse nosso site"
-                     class="qr__acesse--site" />
-                <h3 class="acesse--site">Acesse nosso site</h3>
-            </div>
-        </div>
-        <div class="container__qr">
-            <div class="container__acesse--cardapio">
-                <img
-                     src="../img/QR_cardapio_Pedrao_Lanches.png"
-                     alt="qr code cardapio"
-                     class="qr__cardapio" />
-                <h3 class="acesse--cardapio">Acesse nosso cardapio</h3>
-            </div>
-        </div>
+    <h4 class="since">Pedrão Lanches -- Desde 2023</h4>
+    <hr>
+    <h4 class="autor">Feito com &#x2764; por: PedroABS1</h4>
+    <div class="container__portfolio">
+        <img src="../img/book-solid.svg" class="icon">
+        <a href="https://portfolio-pedroabs1-pi.vercel.app" class="portfolio">portfolio</a>
     </div>
-    <h2 class="since">Desde 2023 matando a sua fome</h2>
-    <a href="https://github.com/pedroabs1" class="autor">Designed by pedroabs1</a>
+    <div class="container__github">
+        <img src="../img/github.svg" class="icon">
+        <a href="https://github.com/pedroabs1" class="github">github</a>
+    </div>
 </footer>
 
 </html>

@@ -5,15 +5,15 @@ let cart = 0;
 const seleciona = (elemento) => document.querySelector(elemento);
 const selecionaTodos = (elemento) => document.querySelectorAll(elemento);
 
-const formatoReal = (valor) => {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-};
+// const formatoReal = (valor) => {
+//     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+// };
 
-const formatoMonetario = (valor) => {
-    if (valor) {
-        return valor.toFixed(2);
-    }
-};
+// const formatoMonetario = (valor) => {
+//     if (valor) {
+//         return valor.toFixed(2);
+//     }
+// };
 
 const abrirModal = () => {
     seleciona('.modal').style.opacity = 0;
@@ -37,7 +37,8 @@ const preencheDadoslanches = (lancheItem, item, index) => {
 
     lancheItem.setAttribute('data-key', index);
     lancheItem.querySelector('.lanche-item--img img').src = item.img;
-    lancheItem.querySelector('.lanche-item--price').innerHTML = formatoReal(item.price[2]);
+    // lancheItem.querySelector('.lanche-item--price').innerHTML = formatoReal(item.price[2]);
+    lancheItem.querySelector('.lanche-item--price').innerHTML = item.price;
     lancheItem.querySelector('.lanche-item--name').innerHTML = item.name;
     lancheItem.querySelector('.lanche-item--desc').innerHTML = item.description;
 };
@@ -46,7 +47,8 @@ const preencheDadosModal = (item) => {
     seleciona('.lancheBig img').src = item.img;
     seleciona('.lanche h1').innerHTML = item.name;
     seleciona('.lanche--desc').innerHTML = item.description;
-    seleciona('.lanche--actualPrice').innerHTML = formatoReal(item.price[2]);
+    // seleciona('.lanche--actualPrice').innerHTML = formatoReal(item.price[2]);
+    seleciona('.lanche--actualPrice').innerHTML = item.price[2];
 };
 
 const pegarKey = (e) => {
@@ -88,7 +90,8 @@ const escolherTamanhoPreco = (key) => {
             size.classList.add('selected');
 
             // mudar o preço de acordo com o tamanho
-            seleciona('.lanche--actualPrice').innerHTML = formatoReal(cardapio[key].price[sizeIndex]);
+            // seleciona('.lanche--actualPrice').innerHTML = formatoReal(cardapio[key].price[sizeIndex]);
+            seleciona('.lanche--actualPrice').innerHTML = cardapio[key].price[sizeIndex];
         });
     });
 };
@@ -259,9 +262,12 @@ const atualizarCarrinho = () => {
 
         //exibir na tela os resultados
         //selecionar o ultimo span do elemento
-        seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal);
-        seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto);
-        seleciona('.total span:last-child').innerHTML = formatoReal(total);
+        // seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal);
+        // seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto);
+        // seleciona('.total span:last-child').innerHTML = formatoReal(total);
+        seleciona('.subtotal span:last-child').innerHTML = subtotal;
+        seleciona('.desconto span:last-child').innerHTML = desconto;
+        seleciona('.total span:last-child').innerHTML = total;
     } else {
         seleciona('aside').classList.remove('show');
         seleciona('aside').style.left = '100vw';

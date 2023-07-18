@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
 
 * {
-    /* outline: 1px solid red; //debug */
     box-sizing: border-box;
 }
 
@@ -45,7 +44,9 @@ h2 {
     width: 100vw;
     height: 120px;
     margin: 0;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: #d32f2f;
 }
 
@@ -60,24 +61,15 @@ h2 {
  */
 
 .titulo {
-    grid-column: 2/ span 2;
-    grid-row: 1;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
-    /* margin: 20px auto; */
-    padding: 20px 10px;
-    height: 40px;
     color: #fff;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.titulo__imagem-avatar {
-    grid-column: 5;
-    grid-row: 1;
+.titulo__avatar {
     height: 80px;
     width: 80px;
-    /* padding: 20px; */
     margin-right: 0;
 }
 
@@ -92,21 +84,33 @@ h2 {
 */
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, auto);
     align-items: center;
-    height: 30px;
+    padding-left: 10px;
+    width: 60px;
 }
 
 .lista-menu {
     display: none;
     position: absolute;
     top: 100%;
-    width: 60vw;
-} 
+    width: 140px;
+    height: 160px;
+    background: #fffefe;
+}
 
-.container__botao:checked ~ .lista-menu{
+.icone__menu {
+    width: 26px;
+    margin-right: 5px;
+}
+
+/* .contato-item, */
+
+.menu-item {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.container__botao:checked ~ .lista-menu {
     display: block;
 }
 
@@ -133,15 +137,15 @@ label span {
     transition: 0.25s ease-in-out;
 }
 
-label span:nth-child(1){
+label span:nth-child(1) {
     top: 0px;
 }
 
-label span:nth-child(2){
+label span:nth-child(2) {
     top: 8px;
 }
 
-label span:nth-child(3){
+label span:nth-child(3) {
     top: 16px;
 }
 
@@ -241,6 +245,52 @@ a.contato-item {
 }
 
 /*
+███████  ██████   ██████  ████████ ███████ ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+█████   ██    ██ ██    ██    ██    █████   ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+██       ██████   ██████     ██    ███████ ██   ██
+*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .since,
+.autor {
+    text-align: left;
+    margin-left: 30px;
+} */
+.since {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.autor {
+    align-items: center;
+    margin-left: 10px;
+    /* text-align: center; */
+}
+.container__portfolio,
+.container__github {
+    display: flex;
+    margin-left: 15px;
+}
+
+.portfolio,
+.github {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.icon {
+    margin-top: 5px;
+    height: 16px;
+    width: 16px;
+    margin-left: 10px;
+}
+/*
  ██████  █████  ██████  ██████   █████  ██████  ██  ██████
 ██      ██   ██ ██   ██ ██   ██ ██   ██ ██   ██ ██ ██    ██
 ██      ███████ ██████  ██   ██ ███████ ██████  ██ ██    ██
@@ -311,8 +361,7 @@ a.contato-item {
 .lanche-area {
     display: grid;
     /* grid-template-columns: auto; */
-    /* margin: auto; */
-    
+    margin-top: 80px;
 }
 
 .lanche-item {
@@ -584,18 +633,7 @@ a.contato-item {
 .acesse--cardapio {
     margin: 5px 0;
 }
-/* .since,
-.autor {
-    text-align: left;
-    margin-left: 30px;
-}
-.since {
-    margin-top: 50px;
-    margin-bottom: 5px;
-}
-.autor {
-    margin-top: 10px;
-} */
+
 /*
  ██████ ██   ██ ███████  ██████ ██   ██  ██████  ██    ██ ████████
 ██      ██   ██ ██      ██      ██  ██  ██    ██ ██    ██    ██
@@ -1211,7 +1249,7 @@ td {
         font-size: 80px;
     }
 
-    .titulo__imagem-avatar {
+    .titulo__avatar {
         height: 200px;
         width: 200px;
     }
@@ -1275,6 +1313,3 @@ td {
 ██      ██ ██  ██  ██
 ██      ██ ██      ██
 */
-.footer {
-    display: none;
-}

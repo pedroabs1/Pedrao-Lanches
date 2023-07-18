@@ -17,41 +17,69 @@
 
 <body>
     <header class="cabecalho">
-        <h1 class="titulo">Carrinho</h1>
+        <!-- .menu-openner aparecera no modo mobile -->
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <!-- <img src="../img/Menu.svg" alt=""> -->
+
+            <label for="menu" class="container__rotulo">
+                <!-- <span class="cabeçalho__menu-hamburguer container__imagem"></span> -->
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="../pages/index.html" class="menu-item">
+                        <img src="../img/icons8-home-100.png" alt="icone de uma casa"
+                             class="icone__menu icone" />Inicio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/cardapio.html" class="menu-item"><img
+                             src="../img/icons8-hamburger-30.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Cardapio</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Carrinho</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Contato</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="../pages/empresa.html" class="menu-item"><img
+                             src="../img/icons8-food-truck-64 (2).png"
+                             alt="icone de uma casa"
+                             class="icone__menu icone" />Empresa</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="contato">
+            <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
+                     src="../img/icon_whatsapp.svg"
+                     alt="logo whatsapp"
+                     class="logo__whatsapp" /></a>
+            <li class="contato-item">
+                Para retirar no local das 18 as 01hrs
+            </li>
+        </ul>
+        <!-- /menu-openner -->
+        </div>
+        <h1 class="titulo">Pedrão Lanches!</h1>
         <img
              class="titulo__avatar"
              src="../img/avatar pedro 100perc.png"
              alt="logo pedrao"
              class="logo__pedrao" />
-        <ul class="menu">
-            <a href="../pages/index.html" class="menu-item">
-                <img src="../img/icons8-home-100.png" alt="icone de uma casa" class="icone__menu icone" />Inicio</a>
-            <a href="../pages/cardapio.html" class="menu-item"><img src="../img/icons8-hamburger-30.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Cardapio</a>
-            <a href="../pages/carrinho.html" class="menu-item"><img src="../img/icons8-bag-96.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Carrinho</a>
-            <a href="../pages/contato.html" class="menu-item"><img src="../img/icons8-at-sign-100.png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Contato</a>
-            <a href="../pages/empresa.html" class="menu-item"><img src="../img/icons8-food-truck-64 (2).png"
-                     alt="icone de uma casa"
-                     class="icone__menu icone" />Empresa</a>
-        </ul>
-        <li class="contato-item">Disk Entregas das 18 as 00hrs</li>
-        <a href="https://wa.me/556792140820" class="contato-item">(67) 91234-5678<img
-                 src="../img/icon_whatsapp.svg"
-                 alt="logo whatsapp"
-                 class="logo__whatsapp" /></a>
-        <a href="https://wa.me/556792140820" class="contato-item">(67) 4234-5678<img
-                 src="../img/icon_whatsapp.svg"
-                 alt="logo whatsapp"
-                 class="logo__whatsapp" /></a>
-        <li class="contato-item">
-            Para retirar no local das 18 as 01hrs
-        </li>
-        </ul>
     </header>
     <main>
         <!-- <h2 class="titulo__principal">Carrinho</h2> -->
